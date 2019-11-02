@@ -6,10 +6,32 @@
   "author": "Lucy Tu <lucy.tu@ringcentral.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && npx webpack"
+    "cleanBuild": "rm -rf dist",
+    "buildJS": "npx webpack",
+    "buildAWSStackTemplate": "npx gulp buildAWSStackTemplate",
+    "buildAWSStack": "npx gulp buildAWSStack",
+    "buildLambda": "npx gulp buildLambda",
+    "build": "yarn cleanBuild && yarn buildJS && yarn buildLambda && yarn buildAWSStackTemplate && yarn buildAWSStack",
+    "gulp": "gulp",
+    "okta": "~/.okta/awscli sts get-caller-identity",
+    "createS3Bucket": "aws s3 mb s3://rc-bot-test-lucy --profile okta-rnd-team_524621635179",
+    "deploy": "./CICD/deploy.sh"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "aws-cli": "^0.0.2",
+    "fs": "^0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
   }
 }
