@@ -18,7 +18,7 @@ NameSpace = {brand}-{project}-{environement}
    1. Function Name: rc-bot-test-lambda-auth
 ```
 
-##source code directory 
+## source code directory 
 
 ```
    packages/
@@ -90,7 +90,7 @@ NameSpace = {brand}-{project}-{environement}
 
 **slack:** contain slack service and correspont AWS reources and stack
 
-##Dist Folder Path
+## Dist Folder Path
 
 ```
 -dist/
@@ -105,7 +105,7 @@ NameSpace = {brand}-{project}-{environement}
    lambda.zip
 ```   
 
-##CI/CD
+## CI/CD
 
 Process:
   1. Set Up Environemt Varialble
