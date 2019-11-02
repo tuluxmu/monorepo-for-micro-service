@@ -1,6 +1,5 @@
 # monorepo-for-micro-service
-1. Bundle Per Differenct Services or Project 
-2.Design AWS Infra Structure
+1. Design AWS Infra Structure
 ##AWS Resource Naming Rule: 
 ```
 Resource Name = ${NameSpace}-${AWSService}[-${Module}]
