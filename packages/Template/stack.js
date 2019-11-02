@@ -1,4 +1,4 @@
-import tags from '../../Config/tags';
+import tags from '../Config/tags';
 export default {
   Type: "AWS::CloudFormation::Stack",
   Properties: {

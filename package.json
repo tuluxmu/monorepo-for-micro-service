@@ -11,7 +11,7 @@
     "buildAWSStackTemplate": "npx gulp buildAWSStackTemplate",
     "buildAWSStack": "npx gulp buildAWSStack",
     "buildLambda": "npx gulp buildLambda",
-    "build": "yarn cleanBuild && yarn buildJS && yarn buildLambda && yarn buildAWSStackTemplate && yarn buildAWSStack",
+    "build": "./CICD/build.sh",
     "gulp": "gulp",
     "okta": "~/.okta/awscli sts get-caller-identity",
     "createS3Bucket": "aws s3 mb s3://rc-bot-test-lucy --profile okta-rnd-team_524621635179",

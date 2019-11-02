@@ -1,5 +1,5 @@
 import fs from 'fs';
-import stack from '../packages/stack'
+import stack from '../packages/stack.entry'
 
 const buildPath = 'dist';
 
