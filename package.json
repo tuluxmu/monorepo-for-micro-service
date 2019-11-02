@@ -1,0 +1,15 @@
+{
+  "name": "monorepo-for-micro-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tuluxmu/monorepo-for-micro-service.git",
+  "author": "Lucy Tu <lucy.tu@ringcentral.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && npx webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
