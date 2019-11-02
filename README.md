@@ -19,6 +19,7 @@ NameSpace = {brand}-{project}-{environement}
 ```
 
 ##source code directory 
+
 ```
    packages/
       Template/
@@ -82,11 +83,15 @@ NameSpace = {brand}-{project}-{environement}
 ```
 
 **Template:** for storing aws cloudformation resource template
+
 **core:** contain auth and meeting service and correspont AWS reources and stack
+
 **teams:** contain teams service and correspont AWS reources and stack
+
 **slack:** contain slack service and correspont AWS reources and stack
 
 ##Dist Folder Path
+
 ```
 -dist/
    lambda/
@@ -101,6 +106,7 @@ NameSpace = {brand}-{project}-{environement}
 ```   
 
 ##CI/CD
+
 Process:
   1. Set Up Environemt Varialble
      1. env.sh
