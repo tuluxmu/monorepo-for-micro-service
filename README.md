@@ -1,31 +1,24 @@
 # monorepo-for-micro-service
-1. Design AWS Infra Structure
-##AWS Resource Naming Rule: 
+
+## Design AWS Infra Structure
+
+
+**AWS Resource Naming Rule**
+
 ```
-Resource Name = ${NameSpace}-${AWSService}[-${Module}]
-NameSpace = ${brand}-${project}-${environement}
-${Module} is optional
+Resource Name = {NameSpace}-{AWSService}-[{service}]
+
+NameSpace = {brand}-{project}-{environement}
 ```
-1. Lambda function:
-   1. Function Name: rc-bot-test-lucy-lambda-auth
-2. Dist Folder
+**Notes:** ${service} is optional
+
+**Examples**
 ```
--dist/
-   lambda/
-      auth.js
-      meeting.js
-      slack.js
-      teams.js
-   stack/
-      meetingStack.js
-      rootStack.js
-   lambda.zip
-```   
-3. source code forder
-Template: for storing aws cloudformation resource template
-core: contain auth and meeting service and correspont AWS reources and stack
-teams: contain teams service and correspont AWS reources and stack
-slack: contain slack service and correspont AWS reources and stack
+1. Lambda function Resource:
+   1. Function Name: rc-bot-test-lambda-auth
+```
+
+##source code directory 
 ```
    packages/
       Template/
@@ -88,9 +81,28 @@ slack: contain slack service and correspont AWS reources and stack
 
 ```
 
-CI/CD
+**Template:** for storing aws cloudformation resource template
+**core:** contain auth and meeting service and correspont AWS reources and stack
+**teams:** contain teams service and correspont AWS reources and stack
+**slack:** contain slack service and correspont AWS reources and stack
+
+##Dist Folder Path
+```
+-dist/
+   lambda/
+      auth.js
+      meeting.js
+      slack.js
+      teams.js
+   stack/
+      meetingStack.js
+      rootStack.js
+   lambda.zip
+```   
+
+##CI/CD
 Process:
-  1. Set Up Environemt Varial
+  1. Set Up Environemt Varialble
      1. env.sh
   2. Build
      1. build Lambda
