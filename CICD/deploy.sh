@@ -13,7 +13,6 @@ aws s3 cp ${buildPath} s3://${bucket} \
     --profile ${profile}
 if [ $? != 0 ]; then exit 1; fi
 
-./packages/AWS/deploy.sh
 
 
 
