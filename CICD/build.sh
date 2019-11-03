@@ -4,8 +4,6 @@ source CICD/env.sh
 
 yarn cleanBuild 
 yarn buildJS 
-yarn buildLambda 
-yarn buildAWSStackTemplate 
 yarn buildAWSStack
 
 cd dist/

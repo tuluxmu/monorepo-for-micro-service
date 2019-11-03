@@ -1,4 +1,4 @@
-import dynamodb from '../../../../Template/dynamodb';
+import dynamodb from '../../Template/dynamodb';
 export default {
   Resources: {
     'database-meeting': {

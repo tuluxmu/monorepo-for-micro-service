@@ -8,7 +8,6 @@
   "scripts": {
     "cleanBuild": "rm -rf dist",
     "buildJS": "npx webpack",
-    "buildAWSStackTemplate": "npx gulp buildAWSStackTemplate",
     "buildAWSStack": "npx gulp buildAWSStack",
     "buildLambda": "npx gulp buildLambda",
     "build": "./CICD/build.sh",
@@ -26,6 +25,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },

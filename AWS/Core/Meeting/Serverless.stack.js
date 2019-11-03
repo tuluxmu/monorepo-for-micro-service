@@ -1,4 +1,4 @@
-import lambda from '../../../../Template/lambda';
+import lambda from '../../Template/lambda';
 
 export default {
   Resources: {
