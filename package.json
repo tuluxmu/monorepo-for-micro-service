@@ -14,7 +14,9 @@
     "gulp": "gulp",
     "okta": "~/.okta/awscli sts get-caller-identity",
     "createS3Bucket": "aws s3 mb s3://rc-bot-test-lucy --profile okta-rnd-team_524621635179",
-    "deploy": "./CICD/deploy.sh"
+    "deploy": "./CICD/deploy.sh",
+    "lint": "echo \"not implemented yet\" && exit 0",
+    "test": "echo \"not implemented yet\" && exit 0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
