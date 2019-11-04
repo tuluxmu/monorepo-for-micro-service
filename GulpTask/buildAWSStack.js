@@ -18,7 +18,6 @@ const buildAWSStack = (cb) => {
     fs.mkdirSync(templateDir);
     console.log(`📁Folder created: ${templateDir}`);    
   }   
-
   Object.entries(stack).forEach(([key, value]) => {
     fs.writeFileSync(`${templateDir}/${key}.json`, JSON.stringify(value));
   });
@@ -27,6 +26,7 @@ const buildAWSStack = (cb) => {
   .pipe(replace(/%%nameSpace%%/g, nameSpace))
   .pipe(replace(/%%brand%%/g, brand))
   .pipe(replace(/%%environment%%/g, environment))
+  .pipe(replace(/%%bucket%%/g, nameSpace))
   .pipe(gulp.dest(`${templateDir}/`));
   
   cb();

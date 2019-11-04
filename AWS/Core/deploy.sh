@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source CICD/env.sh
 
-stackName=${nameSpace}-meeting
+stackName=${nameSpace}-core
 
 aws cloudformation deploy \
     --stack-name ${stackName}\

@@ -1,4 +1,6 @@
 import lambda from '../../Template/lambda';
+import config from './Config';
+import rootConfig from '../../Config/index';
 
 export default {
   Resources: {
@@ -6,12 +8,18 @@ export default {
       ...lambda,
       Properties: {
         Code: {
-          S3Bucket: 'rc-bot-test-lucy',
+          S3Bucket: '%%bucket%%',
           S3Key: 'lambda.zip',
         },
-        FunctionName: 'rc-bot-test-lucy-meeting',
+        Environment: {
+          Variables: {
+            ...config,
+            enrironment: '%%environment%%'
+          }
+        },
+        FunctionName: '%%nameSpace%%-meeting',
         Handler: 'lambda/meeting.handler',
-        Role: 'arn:aws:iam::524621635179:role/rc-bot-test-lucy-role',
+        Role: 'arn:aws:iam::524621635179:role/%%nameSpace%%-role',
         Runtime: 'nodejs10.x'
       }
     }
